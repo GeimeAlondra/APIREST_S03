@@ -70,15 +70,15 @@
 
 - Obtener todos los productos
   ```sh
-  GET /api/producto
+  GET /api/productos
 
 - Obtener un producto específico
   ```sh
-  GET /api/producto/{id}
+  GET /api/productos/{id}
 
 - Crear un nuevo producto
   ```sh
-  POST /api/producto
+  POST /api/productos
 
   {
     "nombre": "Samsung Galaxy S20",
@@ -88,7 +88,7 @@
 
 - Actualizar un producto
   ```sh
-  PUT /api/producto/{id}
+  PUT /api/productos/{id}
 
   {
     "id":1,
@@ -99,4 +99,9 @@
 
 - Eliminar un producto
   ```sh
-  DELETE /api/producto/{id}
+  DELETE /api/productos/{id}
+
+**Video de pruebas en Postman**
+
+https://drive.google.com/file/d/1aCTVVCsbgXS5v9BT3K2YxSwQL17aQ9t5/view?usp=sharing 
+
