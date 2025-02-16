@@ -1,0 +1,101 @@
+[
+  {
+    "ContainingType": "APIREST_Semana_03.Controllers.ProductoController",
+    "Method": "ObtenerProducto",
+    "RelativePath": "api/productos",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[APIREST_Semana_03.DTOs.ProductoDTO, APIREST_Semana_03, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "APIREST_Semana_03.Controllers.ProductoController",
+    "Method": "CrearProducto",
+    "RelativePath": "api/productos",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "productoDTO",
+        "Type": "APIREST_Semana_03.DTOs.ProductoDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "APIREST_Semana_03.Controllers.ProductoController",
+    "Method": "ObtenerProductoPorId",
+    "RelativePath": "api/productos/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "APIREST_Semana_03.DTOs.ProductoDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "APIREST_Semana_03.Controllers.ProductoController",
+    "Method": "ActualizarProducto",
+    "RelativePath": "api/productos/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "productoDTO",
+        "Type": "APIREST_Semana_03.DTOs.ProductoDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "APIREST_Semana_03.Controllers.ProductoController",
+    "Method": "EliminarProducto",
+    "RelativePath": "api/productos/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

@@ -5177,11 +5177,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Usuarios\\Alondra\\Documents\\UNAB\\CICLO V -2025 - UNAB\\sPG3-25\\APIREST_Semana_03\\APIREST_Semana_03\\APIREST_Semana_03.csproj",
+      "projectUniqueName": "D:\\Usuarios\\Alondra\\Documents\\UNAB\\CICLO V -2025 - UNAB\\sPG3-25\\Periodo 1\\APIREST_S03\\APIREST_Semana_03\\APIREST_Semana_03.csproj",
       "projectName": "APIREST_Semana_03",
-      "projectPath": "D:\\Usuarios\\Alondra\\Documents\\UNAB\\CICLO V -2025 - UNAB\\sPG3-25\\APIREST_Semana_03\\APIREST_Semana_03\\APIREST_Semana_03.csproj",
+      "projectPath": "D:\\Usuarios\\Alondra\\Documents\\UNAB\\CICLO V -2025 - UNAB\\sPG3-25\\Periodo 1\\APIREST_S03\\APIREST_Semana_03\\APIREST_Semana_03.csproj",
       "packagesPath": "C:\\Users\\Alondra\\.nuget\\packages\\",
-      "outputPath": "D:\\Usuarios\\Alondra\\Documents\\UNAB\\CICLO V -2025 - UNAB\\sPG3-25\\APIREST_Semana_03\\APIREST_Semana_03\\obj\\",
+      "outputPath": "D:\\Usuarios\\Alondra\\Documents\\UNAB\\CICLO V -2025 - UNAB\\sPG3-25\\Periodo 1\\APIREST_S03\\APIREST_Semana_03\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

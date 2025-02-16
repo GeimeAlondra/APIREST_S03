@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore;
 namespace APIREST_Semana_03.Controllers
 {
     // Define la ruta base de este controlador como "api/producto".
-    [Route("api/producto")]
+    [Route("api/productos")]
     [ApiController]
     public class ProductoController : ControllerBase
     {
@@ -28,6 +28,12 @@ namespace APIREST_Semana_03.Controllers
             // Obtiene la lista de productos desde la base de datos.
             var productos = await _context.Productos.ToListAsync();
 
+            // Devuelve un error si no hay productos en la base de datos
+            if (productos == null || productos.Count == 0)
+            {
+                return NotFound(new { mensaje = "No se encontraron productos." });
+            }
+
             // Convierte la lista a DTOs para devolver solo los datos necesarios.
             var productosDTO = productos.Select(p => new ProductoDTO
             {
@@ -37,7 +43,7 @@ namespace APIREST_Semana_03.Controllers
                 Stock = p.Stock
             }).ToList();
 
-            return Ok(productosDTO);
+            return Ok(new { mensaje = "Productos obtenidos con éxito.", productos = productosDTO });
         }
 
         // Método para obtener un producto por su id.
@@ -50,7 +56,7 @@ namespace APIREST_Semana_03.Controllers
             // Devuelve un error si no existe.
             if (producto == null)
             {
-                return NotFound();
+                return NotFound(new { mensaje = $"No se encontró un producto con el ID {id}." });
             }
 
             // Convierte el producto a DTO y lo devuelve.
@@ -62,13 +68,19 @@ namespace APIREST_Semana_03.Controllers
                 Stock = producto.Stock
             };
 
-            return Ok(productoDTO);
+            return Ok(new { mensaje = "Producto obtenido con éxito.", producto = productoDTO });
         }
 
         // Método para crear un nuevo producto.
         [HttpPost]
         public async Task<ActionResult> CrearProducto(ProductoDTO productoDTO)
         {
+            // Devuelve un error si no se ingresan los datos correctos.
+            if (string.IsNullOrWhiteSpace(productoDTO.Nombre) || productoDTO.Precio <= 0 || productoDTO.Stock < 0)
+            {
+                return BadRequest(new { mensaje = "Datos inválidos. Verifique que el nombre no esté vacío, el precio sea mayor a 0 y el stock no sea negativo." });
+            }
+
             // Crea un nuevo producto con los datos recibidos.
             var producto = new Producto
             {
@@ -95,7 +107,13 @@ namespace APIREST_Semana_03.Controllers
             // Devuelve un error si no existe.
             if (producto == null)
             {
-                return NotFound();
+                return NotFound(new { mensaje = $"No se encontró un producto con el ID {id}." });
+            }
+
+            // Devuelve un error si no se ingresan los datos correctos.
+            if (string.IsNullOrWhiteSpace(productoDTO.Nombre) || productoDTO.Precio <= 0 || productoDTO.Stock < 0)
+            {
+                return BadRequest(new { mensaje = "Datos inválidos. Verifique que el nombre no esté vacío, el precio sea mayor a 0 y el stock no sea negativo." });
             }
 
             // Actualiza los datos del producto.
@@ -105,7 +123,7 @@ namespace APIREST_Semana_03.Controllers
 
             // Guarda los cambios en la base de datos.
             await _context.SaveChangesAsync();
-            return Ok();
+            return Ok(new { mensaje = "Producto actualizado con éxito.", producto });
         }
 
         // Método para eliminar un producto.
@@ -118,13 +136,13 @@ namespace APIREST_Semana_03.Controllers
             // Devuelve un error si no existe.
             if (producto == null)
             {
-                return NotFound();
+                return NotFound(new { mensaje = $"No se encontró un producto con el ID {id}." });
             }
 
             // Elimina el producto de la base de datos y guarda los cambios.
             _context.Productos.Remove(producto);
             await _context.SaveChangesAsync();
-            return Ok();
+            return Ok(new { mensaje = "Producto eliminado con éxito." });
         }
     }
 }

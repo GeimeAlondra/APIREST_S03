@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "qoKYzijg0YA=",
+  "dgSpecHash": "RuZB7TY6yhU=",
   "success": true,
-  "projectFilePath": "D:\\Usuarios\\Alondra\\Documents\\UNAB\\CICLO V -2025 - UNAB\\sPG3-25\\APIREST_Semana_03\\APIREST_Semana_03\\APIREST_Semana_03.csproj",
+  "projectFilePath": "D:\\Usuarios\\Alondra\\Documents\\UNAB\\CICLO V -2025 - UNAB\\sPG3-25\\Periodo 1\\APIREST_S03\\APIREST_Semana_03\\APIREST_Semana_03.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Alondra\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\Alondra\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",

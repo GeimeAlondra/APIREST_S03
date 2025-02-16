@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("APIREST_Semana_03")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8ecbef33d4ff9728c973198f43af5bf4fd66c7ba")]
 [assembly: System.Reflection.AssemblyProductAttribute("APIREST_Semana_03")]
 [assembly: System.Reflection.AssemblyTitleAttribute("APIREST_Semana_03")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
